@@ -24,7 +24,7 @@ ADD_DEFINITIONS(-DSVO_DEPTHFILTER_IN_REPROJECTOR)
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -Wall -Werror -D_LINUX -D_REENTRANT -march=native -Wno-unused-variable -Wno-unused-but-set-variable -Wno-unknown-pragmas -Wno-unused-but-set-parameter -Wno-int-in-bool-context -Wno-maybe-uninitialized -Wno-unused-function")
 
 IF(DEFINED ENV{ARM_ARCHITECTURE})
-  # SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -mfpu=neon -march=armv7-a")
+  # SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -mfpu=neon -march=armv8-a")
   SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -march=armv7-a")
   ADD_DEFINITIONS(-DHAVE_FAST_NEON)
 ELSE()
